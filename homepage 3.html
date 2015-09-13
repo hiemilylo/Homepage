@@ -1,0 +1,228 @@
+<html>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("p").on({
+				mouseenter: function(){
+					$(this).css("background-color", "#FFFFFF");
+				},  
+				mouseleave: function(){
+					$(this).css("background-color", "#EBF5FF");
+				}, 
+				click: function(){
+					$(this).css("background-color", "#94DBFF");
+				}  
+			});
+		});
+	</script>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<title>Emily's Homepage</title>	
+		<style>
+		
+		body{
+			background-image: url(congruent_pentagon.png);
+			background-repeat: repeat;
+		}
+		h1{
+			font-family: 'Open Sans', sans-serif;
+			margin: 25px 50px 30px 50px;
+			padding: 25px 50px 40px 100px;
+			background-color: #EBF5FF;
+			border-style: solid;
+			border-width: 5px;
+			border-color: #94DBFF;
+			text-align: center;
+			box-shadow:0px 3px 10px rgba(0,0,0,0.3);
+		} 
+ 		p{
+			font-family: 'Open Sans', sans-serif;
+			margin: 25px 100px 30px 100px;
+			padding: 25px 50px 30px 100px;
+			background-color: #FFFFFF;
+			border-style: solid;
+			border-radius: 15px;
+			border-width: 5px;
+			border-color: #94DBFF;
+			word-wrap: break-word;
+		} 
+		p:hover{
+			background-color: #EBF5FF;
+		}
+		IMG{
+			display: block;
+			margin: 0 auto;
+		}
+
+		.tabs {
+			width:100%;
+			display:inline-block;
+		}
+ 
+		.tab-links:after {
+			display:block;
+			clear:both;
+			content:'';
+		}
+	 
+		.tab-links li {
+			margin:0px 5px;
+			float:left;
+			list-style:none;
+		}
+ 
+        .tab-links a {
+			font-family: 'Open Sans', sans-serif;
+            padding:9px 15px;
+            display:inline-block;
+            border-radius:3px 3px 0px 0px;
+            background:#7FB5DA;
+            font-size:16px;
+            font-weight:600;
+            color:#000000;
+            transition:all linear 0.15s;
+        }
+ 
+        .tab-links a:hover {
+            background:#a7cce5;
+            text-decoration:none;
+        }
+ 
+		li.active a, li.active a:hover {
+			background:#fff;
+			color:#4c4c4c;
+		}
+	 
+		.tab-content {
+			padding:15px;
+			border-radius:6px;
+			box-shadow:-1px 1px 1px rgba(0,0,0,0.8);
+			background:#fff;
+		}
+ 
+        .tab {
+            display:none;
+        }
+ 
+        .tab.active {
+            display:block;
+        }
+		
+		</style>
+	</head>
+	<body>
+		<h1>Girls Who Code Summer Immersion 2015: Emily</h1>
+
+		<script>
+			function changePicture(){
+				var value = $('#options').val();
+				$('#picHolder').attr('src', value);
+			}
+			jQuery(document).ready(function() {
+				jQuery('.tabs .tab-links a').on('click', function(e)  {
+					var currentAttrValue = jQuery(this).attr('href');
+			 
+					// Show/Hide Tabs
+					jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+			 
+					// Change/remove current tab to active
+					jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+			 
+					e.preventDefault();
+				});
+			});
+		</script>
+		
+		<div class="tabs">
+		<ul class="tab-links">
+			<li class="active"><a href="#tab1">About the Program!</a></li>
+			<li><a href="#tab2">Early Projects</a></li>
+			<li><a href="#tab3">Arduino Projects</a></li>
+			<li><a href="#tab4">Pictures!</a></li>
+			<li><a href="#tab5">About Me</a></li>
+		</ul>
+ 
+		<div class="tab-content">
+			<div id="tab1" class="tab active">
+				<p> This is a website that showcases my Girls Who Code Projects! The Girls Who Code Summer Immersion 
+				Program is a 7-week intensive computer science course that embeds classrooms in technology companies and
+				universities. Girls learn everything from robotics to mobile development to HTML and CSS while gaining 
+				exposure to the tech industry and receiving valuable mentorship from women working in technology. </p>
+				<p> In order to find out more about the program, click the logo below:
+					<A HREF="https://girlswhocode.com/programs/">
+					<IMG id ="GWC" SRC="gwclogo.png" ALT="Girls-Who-Code" width = 400;></IMG>
+					</A> 
+				</p>
+			</div>
+	 
+			<div id="tab2" class="tab">
+					<p> In the first week, we learned about simple animations in Javascript. Using the 
+						Khan academy environment, we learned how the loop function worked and how to make objects move 
+						across the screen. For this unit, I paired up with Audrey to make a simple fish tank.
+						<br><br>
+						<IMG id ="fishtank" SRC="fish tank 1.0.PNG" width = 300;></IMG>
+					</p>
+					<p> We also made programs that simulated Jackson Pollock's splatter paintings.
+						<br><br>
+						<IMG id = "splatter" SRC ="splatterpainting.PNG" width = 300;></IMG>
+					</p>
+					<p> Then, we got into larger groups and made a city scroller assignment. We were assigned to make a
+						background that would continuously scroll, creating a scene.
+						<br><br>
+						<IMG id = "cityScroller" SRC = "city scroller.jpg" width = 300;></IMG>
+						<br><br>
+						In addition, we made it a game where a bear collects honeys and avoids aliens. I created and animated
+						the front layer ( the moon ) and the bear! 
+					</p>
+					<p> During the second week, were exposed to a new language, Python, and used that to program small 
+						robots called Scribblers. In groups of four, we worked to make our robots do something special. 
+						<br><br> 
+						<IMG id ="helloWorld" SRC="helloworld.jpg" width = 400;></IMG>
+						<br><br> 
+						With Isabel, Jananni, and Vibha, I programmed the robot to write "Hello World" on a large piece of 
+						poster paper while "beeping" the tune to Hello, Goodbye by the Beatles. 
+					</p>
+			</div>
+	 
+			<div id="tab3" class="tab">
+				<p> In order to become familiar with the Arduinos, we recreated the game Simon with the Arduinos. I worked with 
+					Pratibha in this activity.
+						<IMG id ="Simon" SRC="simon.jpg" width = 400;></IMG>
+				</p>
+				<p> This was Pratibha, Shweta, and my Tic-Tac-Toe project! It was the second project made using the Arduino kits.
+					<br><br>
+						<IMG id ="tictactoe" SRC="TicTacToe picture.jpg" width = 400;></IMG>
+						</A> 
+					<br> 
+					In this project, we were given the choice of making anything out of the arduino kits. This project 
+					proved to be difficult because we did not have any port extendors, limiting us to the 13 pins to control the 
+					9 LED lights and two buttons.
+				</p>
+			</div>
+			
+	 
+			<div id="tab4" class="tab">
+				<p><label for="select-choice-a" class="select">Choose a project:</label>
+					<select name="select-choice-a" id="options" data-native-menu="false">
+						<option value="obamicon.jpg">Obamicon</option>
+						<option value ="splatterpainting.PNG">Jackson Pollock</option>
+						<option value ="city scroller.jpg">City Scroller</option>
+						<option value ="fish tank 1.0.PNG">Fish Tank 1.0</option>
+						<option value="simon.jpg">Simon</option>
+						<option value="TicTacToe picture.jpg">Tic Tac Toe</option>
+						<input type="button" value="     " data-theme="b" onclick="changePicture()">
+					</select>
+					<img id = "picHolder" src = "obamicon.jpg"></img>
+				</p>
+			</div>
+			
+			<div id="tab5" class="tab">
+				<p>Hi! I'm Emily Lo, an upcoming senior at Lynbrook High School. I enjoy spending time with my family,
+					drawing, singing, and of course coding. I made this website as a part of the Girls Who Code Summer
+					Immersion Program curriculum. 
+					<IMG id = "profile" SRC= "profile.jpg" width = 300;></IMG>
+				</p>
+			</div>
+			
+	</body>
+</html>
