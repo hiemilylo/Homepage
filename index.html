@@ -22,7 +22,7 @@
 					var currentAttrValue = jQuery(this).attr('href');
 			 
 					// Show/Hide Tabs
-					jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+					jQuery('.tabs ' + currentAttrValue).slideDown(400).siblings().slideUp(400);
 			 
 					// Change/remove current tab to active
 					jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
@@ -111,7 +111,7 @@
 						<option value ="fish tank 1.0.PNG">Fish Tank 1.0</option>
 						<option value="simon.jpg">Simon</option>
 						<option value="TicTacToe picture.jpg">Tic Tac Toe</option>
-						<input type="button" value="     " data-theme="b" onclick="changePicture()">
+						<input type="button" value="Select" data-theme="b" onclick="changePicture()">
 					</select>
 					<img id = "picHolder" src = "obamicon.jpg"></img>
 				</p>
