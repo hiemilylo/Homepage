@@ -1,4 +1,7 @@
-var categories = [{"media": "Sketch"}, {"media": "Oil Paintings"}, {"media": "Watercolors"}];
+var categories = [
+{"media": "Sketch"}, 
+{"media": "Oil Paintings"}, 
+{"media": "Watercolors"}];
 
 function changePicture(){
 	var value = $('#options').val();
@@ -21,6 +24,7 @@ function showCategories(){
 		divContent.setAttribute("id", "menu-" + i);
 		divContent.setAttribute("class", "menu-section-content");
 		var p = document.createElement("p");
+		addPictures(categories[i].media);
 
 		divContent.appendChild(p);
 		divSec.appendChild(a);
@@ -28,7 +32,10 @@ function showCategories(){
 	}
 	div.appendChild(divSec);
 	document.getElementById("category").appendChild(div);
+}
 
+function addPictures( media ){
+	console.log("here!");
 }
 
 $(document).ready(function() {

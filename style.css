@@ -1,129 +1,128 @@
 
-		body{
-			background-color: #FFFFFF;
-		}
+body{
+	background-color: #FFFFFF;
+}
 
-		h1{
-			font-family: 'Open Sans', sans-serif;
-			margin: 25px 50px 30px 50px;
-			padding: 25px 50px 0px 100px;
-			border-style: none;
-			text-align: center;
-		} 
- 		p{
-			font-family: 'Open Sans', sans-serif;
-			margin: 25px 100px 30px 100px;
-			padding: 25px 50px 30px 100px;
-			background-color: #FFFFFF;
-			border-style: solid;
-			border-radius: 15px;
-			border-width: 5px;
-			border-color: #94DBFF;
-			word-wrap: break-word;
-		} 
+h1{
+	font-family: 'Open Sans', sans-serif;
+	margin: 25px 50px 30px 50px;
+	padding: 25px 50px 0px 100px;
+	border-style: none;
+	text-align: center;
+} 
+	p{
+	font-family: 'Open Sans', sans-serif;
+	margin: 25px 100px 30px 100px;
+	padding: 25px 50px 30px 100px;
+	background-color: #FFFFFF;
+	border-style: solid;
+	border-radius: 15px;
+	border-width: 5px;
+	border-color: #94DBFF;
+	word-wrap: break-word;
+} 
 
-		IMG{
-			display: block;
-			margin: 0 auto;
-		}
+IMG{
+	display: block;
+	margin: 0 auto;
+}
 
-		.tabs {
-			width:75%;
-			padding-left: 13%;
-		}
+.tabs {
+	width:75%;
+	padding-left: 13%;
+}
 
-		.tab-nav{
-			padding-left:16%;
-		}
+.tab-nav{
+	padding-left:16%;
+}
 
-		.tab-links{
-			margin:0px;
-		}
- 
-		.tab-links:after {
-			display:block;
-			clear:both;
-			content:'';
-		}
-	 
-		.tab-links li {
-			margin:0px 5px;
-			float:left;
-			list-style:none;
-		}
- 
-        .tab-links a {
-			font-family: 'Open Sans', sans-serif;
-            padding:9px 15px;
-            display:inline-block;
-            background:#7FB5DA;
-            font-size:12px;
-            font-weight:600;
-            color:#000000;
-            transition:all linear 0.15s;
-        }
- 
-        .tab-links a:hover {
-            background:#a7cce5;
-            text-decoration:none;
-        }
- 
-		li.active a, li.active a:hover {
-			background:#fff;
-			color:#4c4c4c;
-		}
-	 
-		.tab-content {
-			padding:15px;
-			border-radius:6px;
-			background:#fff;
-		}
- 
-        .tab {
-            display:none;
-        }
- 
-        .tab.active {
-            display:block;
-        }
+.tab-links{
+	margin:0px;
+}
 
-        .menu, .menu * {
-		    -webkit-box-sizing:border-box; 
-		    -moz-box-sizing:border-box; 
-		    box-sizing:border-box;
-		}
-		 
-		.menu {
-		    overflow:hidden;
-		    box-shadow:0px 1px 3px rgba(0,0,0,0.25);
-		    border-radius:3px;
-		    background:#E8E8E8;
-		}
-		 
-		.menu-section-title {
-		    width:100%;
-		    padding:15px;
-		    display:inline-block;
-		    border-bottom:1px solid #666666;
-		    background: #C0C0C0;
-		    transition: all linear 0.15s;
-		    font-size: 1em;
-		    font-family: 'Open Sans', sans-serif;
-		    text-shadow: 0px 1px 0px #1a1a1a;
-		    color: #000000;
-		}
-		 
-		.menu-section-title.active, .menu-section-title:hover {
-		    background:#8A8A8A;
-		    text-decoration:none;
-		}
-		 
-		.menu-section:last-child .menu-section-title {
-		    border-bottom:none;
-		}
-		 
-		/*----- Section Content -----*/
-		.menu-section-content {
-		    padding:15px;
-		    display:none;
-		}
+.tab-links:after {
+	display:block;
+	clear:both;
+	content:'';
+}
+
+.tab-links li {
+	margin:0px 5px;
+	float:left;
+	list-style:none;
+}
+
+.tab-links a {
+	font-family: 'Open Sans', sans-serif;
+    padding:9px 15px;
+    display:inline-block;
+    background:#7FB5DA;
+    font-size:12px;
+    font-weight:600;
+    color:#000000;
+    transition:all linear 0.15s;
+}
+
+.tab-links a:hover {
+    background:#a7cce5;
+    text-decoration:none;
+}
+
+li.active a, li.active a:hover {
+	background:#fff;
+	color:#4c4c4c;
+}
+
+.tab-content {
+	padding:15px;
+	border-radius:6px;
+	background:#fff;
+}
+
+.tab {
+    display:none;
+}
+
+.tab.active {
+    display:block;
+}
+
+.menu, .menu * {
+    -webkit-box-sizing:border-box; 
+    -moz-box-sizing:border-box; 
+    box-sizing:border-box;
+}
+ 
+.menu {
+    overflow:hidden;
+    box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+    border-radius:3px;
+    background:#E8E8E8;
+}
+ 
+.menu-section-title {
+    width:100%;
+    padding:15px;
+    display:inline-block;
+    border-bottom:1px solid #666666;
+    background: #C0C0C0;
+    transition: all linear 0.15s;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 0px 1px 0px #1a1a1a;
+    color: #000000;
+}
+ 
+.menu-section-title.active, .menu-section-title:hover {
+    background:#8A8A8A;
+    text-decoration:none;
+}
+ 
+.menu-section:last-child .menu-section-title {
+    border-bottom:none;
+}
+ 
+.menu-section-content {
+    padding:15px;
+    display:none;
+}
