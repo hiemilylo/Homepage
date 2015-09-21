@@ -12,10 +12,6 @@
 		</h1>
 
 		<script>
-			function changePicture(){
-				var value = $('#options').val();
-				$('#picHolder').attr('src', "Images/" + value);
-			}
 
 			jQuery(document).ready(function() {
 				jQuery('.tabs .tab-links a').on('click', function(e)  {
@@ -127,6 +123,7 @@
 					</select>
 					<img id = "picHolder" src = "Images/obamicon.jpg"></img>
 				</p>
+				<script src="artJscript.js"></script>
 			</div>
 			
 			<div id="tab5" class="tab">
