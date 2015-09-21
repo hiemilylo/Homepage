@@ -6,36 +6,53 @@ function changePicture(){
 }
 
 function showCategories(){
-	// var div = document.createElement("div");
-	// var p = document.createElement("p");
-
-	for (var i = 0; i< categories.length; i++) {
-		var div = document.createElement("div");
-		var p = document.createElement("p");
-		p.setAttribute("style", "border-radius: 0px; border-style: none; background-color: #555555;");
-		//  p{
-		// 	font-family: 'Open Sans', sans-serif;
-		// 	margin: 25px 100px 30px 100px;
-		// 	padding: 25px 50px 30px 100px;
-		// 	background-color: #FFFFFF;
-		// 	border-style: solid;
-		// 	border-radius: 15px;
-		// 	border-width: 5px;
-		// 	border-color: #94DBFF;
-		// 	word-wrap: break-word;
-		// } 
-		p.name = categories[i].media;
-		p.addEventListener("click", function() {
-			console.log("clicked");
-		});
-		var font = document.createElement("font");
-		font.setAttribute("style", "color: #FFFFFF;");
+	var div = document.createElement("div");
+	div.setAttribute("class", "menu");
+	var divSec = document.createElement("div");
+	divSec.setAttribute("class", "menu-section");
+	for ( var i = 0; i < categories.length; i++ ){
+		var a = document.createElement("a");
+		a.setAttribute("class", "menu-section-title");
+		a.setAttribute("href", "#menu-" + i);
 		var text = document.createTextNode(categories[i].media);
-		font.appendChild(text);
-		p.appendChild(font);
-		div.appendChild(p);
-		document.getElementById("category").appendChild(div);
+		a.appendChild(text);
+
+		var divContent = document.createElement("div");
+		divContent.setAttribute("id", "menu-" + i);
+		divContent.setAttribute("class", "menu-section-content");
+		var p = document.createElement("p");
+
+		divContent.appendChild(p);
+		divSec.appendChild(a);
+		divSec.appendChild(divContent);
 	}
+	div.appendChild(divSec);
+	document.getElementById("category").appendChild(div);
+
 }
 
+$(document).ready(function() {
+    function close_menu_section() {
+        $('.menu .menu-section-title').removeClass('active');
+        $('.menu .menu-section-content').slideUp(300).removeClass('open');
+    }
+ 
+    $('.menu-section-title').click(function(e) {
+        // Grab current anchor value
+        var currentAttrValue = $(this).attr('href');
+ 
+        if($(e.target).is('.active')) {
+            close_menu_section();
+        }else {
+            close_menu_section();
+ 
+            // Add active class to section title
+            $(this).addClass('active');
+            // Open up the hidden content panel
+            $('.menu ' + currentAttrValue).slideDown(300).addClass('open'); 
+        }
+ 
+        e.preventDefault();
+    });
+});
 showCategories();
