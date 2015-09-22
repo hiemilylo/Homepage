@@ -3,6 +3,14 @@ var categories = [
 {"media": "Oil Paintings"}, 
 {"media": "Watercolors"}];
 
+var pictures = [
+{"post1" : "Second annual self portrait, 8\"x9\" drawing pad; January 2nd, 2015. Colored pencils and photoshop for background."}, 
+{"post1" : "Oil Paintings coming soon"},
+{"post1" : "Watercolors coming soon"}
+];
+
+var numPictures = 1; 
+
 function changePicture(){
 	var value = $('#options').val();
 	$('#picHolder').attr('src', "Images/" + value);
@@ -23,10 +31,14 @@ function showCategories(){
 		var divContent = document.createElement("div");
 		divContent.setAttribute("id", "menu-" + i);
 		divContent.setAttribute("class", "menu-section-content");
-		var p = document.createElement("p");
-		addPictures(categories[i].media);
 
-		divContent.appendChild(p);
+		for ( var j = 0; j < numPictures; j++ ){
+			var p = document.createElement("p");
+			var text = document.createTextNode(getPicture(i, j));
+			p.appendChild(text);
+			divContent.appendChild(p);
+		}
+
 		divSec.appendChild(a);
 		divSec.appendChild(divContent);
 	}
@@ -34,8 +46,16 @@ function showCategories(){
 	document.getElementById("category").appendChild(div);
 }
 
-function addPictures( media ){
-	console.log("here!");
+function getPicture( i, j ){
+	if ( j == 0 ){
+		return pictures[i].post1;
+	}
+	else if ( j == 1 ){
+		return pictures[i].post2;
+	}
+	else{
+		return "nothing found";
+	}
 }
 
 $(document).ready(function() {
