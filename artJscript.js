@@ -1,14 +1,13 @@
-var categories = [
-{"media": "Sketch"}, 
-{"media": "Oil Paintings"}, 
-{"media": "Watercolors"}];
+var categories = ["Sketch", "Oil Paintings", "Watercolors"];
 
 var pictures = [
-{"post1" : "Second annual self portrait, 8\"x9\" drawing pad; January 2nd, 2015. Colored pencils and photoshop for background."}, 
-{"post1" : "Oil Paintings coming soon"},
-{"post1" : "Watercolors coming soon"}
+{"post1" : "Second annual self portrait, 8\"x9\" drawing pad; January 2nd, 2015. Colored pencils and photoshop for background.",
+	"post1img" : "Images/Art/self2.JPG"}, 
+{"post1" : "Oil Paintings coming soon",
+	"post1img" : "Images/Art/2015 birthday.JPG"},
+{"post1" : "Watercolors coming soon",
+	"post1img" : "Images/Art/2015 birthday.JPG"}
 ];
-
 var numPictures = 1; 
 
 function changePicture(){
@@ -25,7 +24,7 @@ function showCategories(){
 		var a = document.createElement("a");
 		a.setAttribute("class", "menu-section-title");
 		a.setAttribute("href", "#menu-" + i);
-		var text = document.createTextNode(categories[i].media);
+		var text = document.createTextNode(categories[i]);
 		a.appendChild(text);
 
 		var divContent = document.createElement("div");
@@ -34,8 +33,13 @@ function showCategories(){
 
 		for ( var j = 0; j < numPictures; j++ ){
 			var p = document.createElement("p");
-			var text = document.createTextNode(getPicture(i, j));
+			var img = document.createElement("IMG");
+			img.setAttribute("SRC", getPicture(i, j, 2));
+			img.setAttribute("style", "width: 400;");
+			p.appendChild(img);
+			var text = document.createTextNode(getPicture(i, j, 1));
 			p.appendChild(text);
+			// <IMG id ="self" SRC="Images/Art/self2.JPG" width = 400;></IMG> <br>
 			divContent.appendChild(p);
 		}
 
@@ -46,15 +50,28 @@ function showCategories(){
 	document.getElementById("category").appendChild(div);
 }
 
-function getPicture( i, j ){
-	if ( j == 0 ){
-		return pictures[i].post1;
-	}
-	else if ( j == 1 ){
-		return pictures[i].post2;
+function getPicture( i, j, k ){
+	if ( k === 1 ){ // wants text
+		if ( j == 0 ){
+			return pictures[i].post1;
+		}
+		else if ( j == 1 ){
+			return pictures[i].post2;
+		}
+		else{
+			return "no text found";
+		}
 	}
 	else{
-		return "nothing found";
+		if ( j == 0 ){
+			return pictures[i].post1img;
+		}
+		else if ( j == 1 ){
+			return pictures[i].post2img;
+		}
+		else{
+			return "no img found";
+		}
 	}
 }
 
