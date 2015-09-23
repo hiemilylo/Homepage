@@ -24,8 +24,11 @@ function changePicture(){
 function showCategories(){
 	var div = document.createElement("div");
 	div.setAttribute("class", "menu");
+	// div.setAttribute("style", "padding:10%;");
+	// // div.setAttribute("style", "padding-color: ")
 	var divSec = document.createElement("div");
 	divSec.setAttribute("class", "menu-section");
+
 	for ( var i = 0; i < categories.length; i++ ){
 		var a = document.createElement("a");
 		a.setAttribute("class", "menu-section-title");
@@ -38,7 +41,7 @@ function showCategories(){
 		divContent.setAttribute("class", "menu-section-content");
 
 		for ( var j = 0; j < numPictures; j++ ){
-			console.log(getPicture(i,j,1));
+
 			if ( getPicture(i,j,1) != "NN" ){
 				var p = document.createElement("p");
 				var img = document.createElement("IMG");
