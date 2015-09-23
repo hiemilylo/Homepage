@@ -7,26 +7,10 @@
 		<link href="style.css" rel="stylesheet" />
 	</head>
 	<body>
+		<script src="Javascript/indexJs.js"></script>
 		<h1>
 			<IMG id ="Name" SRC="Images/signature1a.jpg" width = 50%;></IMG>
 		</h1>
-
-		<script>
-			jQuery(document).ready(function() {
-				jQuery('.tabs .tab-links a').on('click', function(e)  {
-					var currentAttrValue = jQuery(this).attr('href');
-			 
-					// Show/Hide Tabs
-					jQuery('.tabs ' + currentAttrValue).slideDown(400).siblings().slideUp(400);
-			 
-					// Change/remove current tab to active
-					jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
-			 
-					e.preventDefault();
-				});
-			});
-		</script>
-
 		<div class="tabs">
 			<div class = "tab-nav">
 				<ul class="tab-links" style>
@@ -121,7 +105,7 @@
 					</select>
 					<img id = "picHolder" src = "Images/obamicon.jpg"></img>
 				</p>
-				<script src="artJscript.js"></script>
+				<script src="Javascript/artJscript.js"></script>
 			</div>
 			
 			<div id="tab5" class="tab">
