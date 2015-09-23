@@ -2,13 +2,19 @@ var categories = ["Sketch", "Oil Paintings", "Watercolors"];
 
 var pictures = [
 {"post1" : "Second annual self portrait, 8\"x9\" drawing pad; January 2nd, 2015. Colored pencils and photoshop for background.",
-	"post1img" : "Images/Art/self2.JPG"}, 
+	"post1img" : "Images/Art/self2.JPG", 
+	"post2" : "Study drawing from a magazine, 18\"x24\" newsprint; February 21st, 2014. One brown colored pencil.",
+	"post2img" : "Images/Art/model.JPG"},
 {"post1" : "Oil Paintings coming soon",
-	"post1img" : "Images/Art/2015 birthday.JPG"},
+	"post1img" : "Images/Art/2015 birthday.JPG",
+	"post2" : "NN",
+	"post2img" : "NN"},
 {"post1" : "Watercolors coming soon",
-	"post1img" : "Images/Art/2015 birthday.JPG"}
-];
-var numPictures = 1; 
+	"post1img" : "Images/Art/2015 birthday.JPG",
+	"post2" : "NN",
+	"post2img" : "NN"}];
+
+var numPictures = 2; 
 
 function changePicture(){
 	var value = $('#options').val();
@@ -32,15 +38,18 @@ function showCategories(){
 		divContent.setAttribute("class", "menu-section-content");
 
 		for ( var j = 0; j < numPictures; j++ ){
-			var p = document.createElement("p");
-			var img = document.createElement("IMG");
-			img.setAttribute("SRC", getPicture(i, j, 2));
-			img.setAttribute("style", "width: 400;");
-			p.appendChild(img);
-			var text = document.createTextNode(getPicture(i, j, 1));
-			p.appendChild(text);
-			// <IMG id ="self" SRC="Images/Art/self2.JPG" width = 400;></IMG> <br>
-			divContent.appendChild(p);
+			console.log(getPicture(i,j,1));
+			if ( getPicture(i,j,1) != "NN" ){
+				var p = document.createElement("p");
+				var img = document.createElement("IMG");
+				img.setAttribute("SRC", getPicture(i, j, 2));
+				img.setAttribute("style", "width: 400;");
+				p.appendChild(img);
+				var text = document.createTextNode(getPicture(i, j, 1));
+				p.appendChild(text);
+				// <IMG id ="self" SRC="Images/Art/self2.JPG" width = 400;></IMG> <br>
+				divContent.appendChild(p);
+			}
 		}
 
 		divSec.appendChild(a);
@@ -59,7 +68,7 @@ function getPicture( i, j, k ){
 			return pictures[i].post2;
 		}
 		else{
-			return "no text found";
+			return "NN";
 		}
 	}
 	else{
@@ -70,7 +79,7 @@ function getPicture( i, j, k ){
 			return pictures[i].post2img;
 		}
 		else{
-			return "no img found";
+			return "NN";
 		}
 	}
 }
