@@ -1,4 +1,4 @@
-var categories = ["Sketch", "Oil Paintings", "Watercolors"];
+var categories = ["Sketches", "Oil Paintings", "Watercolors"];
 
 var pictures = [
 	{
@@ -52,6 +52,7 @@ var pictures = [
 
 					img.setAttribute("SRC", getPicture(i, j, 2));
 					img.setAttribute("style", "width: 45%; padding: 5%; display: inline-block;");
+
 					section.appendChild(img);
 					// var text = document.createTextNode(getPicture(i, j, 1));
 					// section.appendChild(text);
