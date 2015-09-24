@@ -5,12 +5,13 @@ body{
 
 h1{
 	font-family: 'Open Sans', sans-serif;
-	margin: 25px 50px 30px 50px;
+	margin: 25px 50px 0px 50px;
 	padding: 25px 50px 0px 100px;
 	border-style: none;
 	text-align: center;
 }
-	p{
+
+p{
 	font-family: 'Open Sans', sans-serif;
 	margin: 25px 100px 30px 100px;
 	padding: 25px 50px 30px 100px;
@@ -25,6 +26,21 @@ h1{
 IMG{
 	display: block;
 	margin: 0 auto;
+}
+
+.contactLogo{
+	width: 5%;
+	display: inline-block;
+}
+
+.contact{
+	float: right;
+	list-style-type: none;
+}
+
+.contactDiv{
+	margin-top: 0;
+	margin-bottom: 5%;
 }
 
 .tabs {
