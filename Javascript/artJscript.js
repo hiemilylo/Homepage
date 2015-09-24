@@ -9,13 +9,13 @@ var pictures = [
 	},
 	{
 		"post1" : "Oil Paintings coming soon",
-		"post1img" : "Images/Art/2015 birthday.JPG",
+		"post1img" : "Images/Art/2015birthday.JPG",
 		"post2" : "NN",
 		"post2img" : "NN"
 	},
 	{
 		"post1" : "Watercolors coming soon",
-		"post1img" : "Images/Art/2015 birthday.JPG",
+		"post1img" : "Images/Art/2015birthday.JPG",
 		"post2" : "NN",
 		"post2img" : "NN"
 	}];
@@ -43,20 +43,20 @@ var pictures = [
 			var divContent = document.createElement("div");
 			divContent.setAttribute("id", "menu-" + i);
 			divContent.setAttribute("class", "menu-section-content");
+			var section = document.createElement("section");
+			section.setAttribute("style", "display: inline-block");
 
 			for ( var j = 0; j < numPictures; j++ ){
-
 				if ( getPicture(i,j,1) != "NN" ){
-					var p = document.createElement("p");
 					var img = document.createElement("IMG");
+
 					img.setAttribute("SRC", getPicture(i, j, 2));
-					img.setAttribute("style", "width: 400;");
-					p.appendChild(img);
-					var text = document.createTextNode(getPicture(i, j, 1));
-					p.appendChild(text);
-					// <IMG id ="self" SRC="Images/Art/self2.JPG" width = 400;></IMG> <br>
-					divContent.appendChild(p);
+					img.setAttribute("style", "width: 45%; padding: 5%; display: inline-block;");
+					section.appendChild(img);
+					// var text = document.createTextNode(getPicture(i, j, 1));
+					// section.appendChild(text);
 				}
+				divContent.appendChild(section);
 			}
 
 			divSec.appendChild(a);

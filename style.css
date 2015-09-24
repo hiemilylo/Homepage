@@ -9,7 +9,7 @@ h1{
 	padding: 25px 50px 0px 100px;
 	border-style: none;
 	text-align: center;
-} 
+}
 	p{
 	font-family: 'Open Sans', sans-serif;
 	margin: 25px 100px 30px 100px;
@@ -20,7 +20,7 @@ h1{
 	border-width: 5px;
 	border-color: #94DBFF;
 	word-wrap: break-word;
-} 
+}
 
 IMG{
 	display: block;
@@ -88,11 +88,11 @@ li.active a, li.active a:hover {
 }
 
 .menu, .menu * {
-    -webkit-box-sizing:border-box; 
-    -moz-box-sizing:border-box; 
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
     box-sizing:border-box;
 }
- 
+
 .menu {
     overflow:hidden;
     padding-left: 10%;
@@ -100,7 +100,7 @@ li.active a, li.active a:hover {
     border-radius:3px;
 /*    background:#E8E8E8;
 */}
- 
+
 .menu-section-title {
     width:100%;
     padding:10px;
@@ -113,16 +113,16 @@ li.active a, li.active a:hover {
     text-shadow: 0px 1px 0px #1a1a1a;
     color: #000000;
 }
- 
+
 .menu-section-title.active, .menu-section-title:hover {
     background:#8A8A8A;
     text-decoration:none;
 }
- 
+
 .menu-section:last-child .menu-section-title {
     border-bottom:none;
 }
- 
+
 .menu-section-content {
     padding:15px;
     display:none;
