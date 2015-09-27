@@ -11,7 +11,7 @@ h1{
 	text-align: center;
 }
 
-.tabs p {
+.tab-content p {
 	font-family: 'Open Sans', sans-serif;
 	margin: 25px 100px 30px 100px;
 	padding: 25px 50px 30px 100px;
@@ -49,11 +49,20 @@ IMG{
 }
 
 .tab-nav{
-	padding-left:16%;
+	margin: 0 -9999rem;
+  padding: 0.5rem 9999rem;
+  background: #B4E9E9;
+}
+
+.tab-nav-design{
+	margin: 0 -9999rem;
+  padding: 0.25rem 9999rem;
+  background: #F3E9A8;
 }
 
 .tab-links{
 	margin:0px;
+	padding-left:20%;
 }
 
 .tab-links:after {
