@@ -14,18 +14,6 @@
 		</a>
 	</h1>
 
-	<div class = "contactDiv">
-		<u1 class = "contact">
-			<a href = "https://www.linkedin.com/in/loemily">
-				<IMG class = "contactLogo" SRC = "Images/linkedin.JPG"></IMG>
-			</a>
-			<a href = "https://github.com/hiemilylo">
-				<IMG class = "contactLogo" SRC = "Images/github.JPG"></IMG>
-			</a><br>
-		</u1>
-	</div>
-
-
 	<div class="tabs">
 		<div class = "tab-nav">
 			<ul class="tab-links" style>
@@ -35,11 +23,18 @@
 				<li><a href="#tab4">PICTURES</a></li>
 				<li><a href="#tab5">ABOUT ME</a></li>
 			</ul>
-		</div>
+		</div>  <!-- tab nav -->
 
 		<div class="tab-content">
 			<div id="tab1" class="tab active">
-				<p> This is a website that serves two purposes: an online art portfolio and showcasing my Girls Who Code Projects! The Girls Who Code Summer Immersion Program is a 7-week intensive computer science course that embeds classrooms in technology companies and universities. Girls learn everything from robotics to mobile development to HTML and CSS while gaining exposure to the tech industry and receiving valuable mentorship from women working in technology. </p>
+				<p> This is a website that serves two purposes: an online art portfolio
+					 and showcasing my Girls Who Code Projects! The Girls Who Code Summer
+					  Immersion Program is a 7-week intensive computer science course that
+						 embeds classrooms in technology companies and universities. Girls
+						  learn everything from robotics to mobile development to HTML and
+							 CSS while gaining exposure to the tech industry and receiving
+							 valuable mentorship from women working in technology.
+				</p>
 				<p> In order to find out more about the program, click the logo below:
 					<A HREF="https://girlswhocode.com/programs/">
 						<IMG id ="GWC" SRC="Images/gwclogo.png" ALT="Girls-Who-Code" width = 400;></IMG>
@@ -51,9 +46,10 @@
 					pencils for sketch to oil paint for color shaping. Every week for two
 					hours, I practice these skills under my gracious teacher, Christine
 					Chen.
-				</div>
+				</p>
+			</div> <!-- tab 1 -->
 
-				<div id="tab2" class="tab">
+			<div id="tab2" class="tab">
 					<p> In the first week, we learned about simple animations in
 						Javascript. Using the Khan academy environment, we learned how the
 						loop function worked and how to make objects move across the screen.
@@ -96,7 +92,7 @@
 					proved to be difficult because we did not have any port extendors, limiting us to the 13 pins to control the
 					9 LED lights and two buttons.
 				</p>
-			</div>
+			</div>  <!-- tab 2 -->
 
 			<div id="tab3" class="tab">
 				<section id = "category">
@@ -110,32 +106,42 @@
 			First annual self portrait, 8"x9" drawing pad; January 1st, 2014. Colored pencils and photoshop for background.
 		</p> -->
 
-	</div>
+			</div>  <!-- tab 3 -->
 
-	<div id="tab4" class="tab">
-		<p><label for="select-choice-a" class="select">Choose a project:</label>
-			<select name="select-choice-a" id="options" data-native-menu="false">
-				<option value="obamicon.jpg">Obamicon</option>
-				<option value ="splatterpainting.PNG">Jackson Pollock</option>
-				<option value ="city scroller.jpg">City Scroller</option>
-				<option value ="fish tank 1.0.PNG">Fish Tank 1.0</option>
-				<option value="simon.jpg">Simon</option>
-				<option value="TicTacToe picture.jpg">Tic Tac Toe</option>
-				<input type="button" value="Select" data-theme="b" onclick="changePicture()">
-			</select>
-			<img id = "picHolder" src = "Images/obamicon.jpg"></img>
-		</p>
-		<script src="Javascript/artJscript.js"></script>
-	</div>
+			<div id="tab4" class="tab">
+				<p><label for="select-choice-a" class="select">Choose a project:</label>
+					<select name="select-choice-a" id="options" data-native-menu="false">
+						<option value="obamicon.jpg">Obamicon</option>
+						<option value ="splatterpainting.PNG">Jackson Pollock</option>
+						<option value ="city scroller.jpg">City Scroller</option>
+						<option value ="fish tank 1.0.PNG">Fish Tank 1.0</option>
+						<option value="simon.jpg">Simon</option>
+						<option value="TicTacToe picture.jpg">Tic Tac Toe</option>
+						<input type="button" value="Select" data-theme="b" onclick="changePicture()">
+					</select>
+					<img id = "picHolder" src = "Images/obamicon.jpg"></img>
+				</p>
+				<script src="Javascript/artJscript.js"></script>
+			</div>  <!-- tab 4 -->
 
-	<div id="tab5" class="tab">
-		<p>Hi! I'm Emily Lo, an senior at Lynbrook High School. I enjoy spending time with my family,
-			drawing, singing, and of course coding. I made this website as a part of the Girls Who Code Summer
-			Immersion Program curriculum.
-			<IMG id = "profile" SRC= "Images/profile.jpg" width = 300;></IMG>
-		</p>
-	</div>
+			<div id="tab5" class="tab">
+				<p>Hi! I'm Emily Lo, an senior at Lynbrook High School. I enjoy spending time with my family,
+					drawing, singing, and of course coding. I made this website as a part of the Girls Who Code Summer
+					Immersion Program curriculum.
+					<IMG id = "profile" SRC= "Images/profile.jpg" width = 300;></IMG>
+				</p>
+			</div>  <!-- tab 5 -->
+		</div>  <!-- tab content -->
+</div>  <!-- tabs -->
 
 </body>
+
+<footer>
+	<p align = center> Made from scratch, with ♥ </p>
+	<section id="social">
+		<a href="https://github.com/hiemilylo" ><img src="Images/github.JPG" alt="fb" width="30"/></a>
+		<a href="https://www.linkedin.com/in/loemily" 	><img src="Images/linkedin.JPG" alt="in" width="30"/></a>
+	</section>
+</footer>
 
 </html>

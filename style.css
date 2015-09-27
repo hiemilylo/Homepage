@@ -11,7 +11,7 @@ h1{
 	text-align: center;
 }
 
-p{
+.tabs p {
 	font-family: 'Open Sans', sans-serif;
 	margin: 25px 100px 30px 100px;
 	padding: 25px 50px 30px 100px;
@@ -70,19 +70,19 @@ IMG{
 
 .tab-links a {
 	font-family: 'Open Sans', sans-serif;
-    padding:9px 15px;
-    display:inline-block;
-    background:#7FB5DA;
-    font-size:12px;
-    font-weight:600;
-    color:#000000;
-    transition:all linear 0.15s;
-		text-decoration:none;
+	padding:9px 15px;
+	display:inline-block;
+	background:#7FB5DA;
+	font-size:12px;
+	font-weight:600;
+	color:#000000;
+	transition:all linear 0.15s;
+	text-decoration:none;
 }
 
 .tab-links a:hover {
-    background:#a7cce5;
-    text-decoration:none;
+	background:#a7cce5;
+	text-decoration:none;
 }
 
 li.active a, li.active a:hover {
@@ -97,51 +97,64 @@ li.active a, li.active a:hover {
 }
 
 .tab {
-    display:none;
+	display:none;
 }
 
 .tab.active {
-    display:block;
+	display:block;
 }
 
 .menu, .menu * {
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
 }
 
 .menu {
-    overflow:hidden;
-    padding-left: 10%;
-    padding-right: 10%;
-    border-radius:3px;
-/*    background:#E8E8E8;
+	overflow:hidden;
+	padding-left: 10%;
+	padding-right: 10%;
+	border-radius:3px;
+	/*    background:#E8E8E8;
 */}
 
 .menu-section-title {
-    width:100%;
-    padding:10px;
-    display:inline-block;
-    border-bottom:1px solid #666666;
-    background: #B4D5D5;
-    transition: all linear 0.15s;
-    font-size: 1em;
-    font-family: 'Open Sans', sans-serif;
-    color: #436673;
-		text-decoration: none;
+	width:100%;
+	padding:10px;
+	display:inline-block;
+	border-bottom:1px solid #666666;
+	background: #B4D5D5;
+	transition: all linear 0.15s;
+	font-size: 1em;
+	font-family: 'Open Sans', sans-serif;
+	color: #436673;
+	text-decoration: none;
 }
 
 .menu-section-title.active, .menu-section-title:hover {
-    background:#8EB7B7;
-    text-decoration:none;
+	background:#8EB7B7;
+	text-decoration:none;
 }
 
 .menu-section:last-child .menu-section-title {
-    border-bottom:none;
+	border-bottom:none;
 }
 
 .menu-section-content {
-    padding:15px;
-    display:none;
-    background:#E8E8E8;
+	padding:15px;
+	display:none;
+	background:#E8E8E8;
+}
+
+#social {
+	margin:0px auto 0px 73%;
+}
+
+#social a {
+	display: inline-block;
+}
+
+footer p {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 12px;
 }
