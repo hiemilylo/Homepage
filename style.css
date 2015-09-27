@@ -13,7 +13,7 @@ h1{
 
 .tab-content p {
 	font-family: 'Open Sans', sans-serif;
-	margin: 25px 100px 30px 100px;
+	margin: 10px 100px 30px 100px;
 	padding: 25px 50px 30px 100px;
 	background-color: #FFFFFF;
 	border-style: solid;
@@ -50,7 +50,7 @@ IMG{
 
 .tab-nav{
 	margin: 0 -9999rem;
-  padding: 0.5rem 9999rem;
+  padding: 0.7rem 9999rem;
   background: #B4E9E9;
 }
 
