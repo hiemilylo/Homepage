@@ -20,7 +20,9 @@ var pictures = [
 		"post2img" : "NN"
 	}];
 
-	var numPictures = 2;
+var numPictures = 2;
+
+
 
 	function changePicture(){
 		var value = $('#options').val();
