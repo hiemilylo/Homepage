@@ -68,31 +68,6 @@ var numPictures = 3;
 		document.getElementById("category").appendChild(div);
 	}
 
-	function getPicture( i, j, k ){
-		if ( k === 1 ){ // wants text
-			if ( j == 0 ){
-				return pictures[i].post1;
-			}
-			else if ( j == 1 ){
-				return pictures[i].post2;
-			}
-			else{
-				return "NN";
-			}
-		}
-		else{
-			if ( j == 0 ){
-				return pictures[i].post1img;
-			}
-			else if ( j == 1 ){
-				return pictures[i].post2img;
-			}
-			else{
-				return "NN";
-			}
-		}
-	}
-
 	$(document).ready(function() {
 		function close_menu_section() {
 			$('.menu .menu-section-title').removeClass('active');
