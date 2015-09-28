@@ -1,26 +1,24 @@
 var categories = ["Sketches", "Oil Paintings", "Watercolors"];
 
 var pictures = [
-	{
-		"post1" : "Second annual self portrait, 8\"x9\" drawing pad; January 2nd, 2015. Colored pencils and photoshop for background.",
-		"post1img" : "Images/Art/self2.JPG",
-		"post2" : "Study drawing from a magazine, 18\"x24\" newsprint; February 21st, 2014. One brown colored pencil.",
-		"post2img" : "Images/Art/model.JPG"
-	},
-	{
-		"post1" : "Oil Paintings coming soon",
-		"post1img" : "Images/Art/2015birthday.JPG",
-		"post2" : "NN",
-		"post2img" : "NN"
-	},
-	{
-		"post1" : "Watercolors coming soon",
-		"post1img" : "Images/Art/2015birthday.JPG",
-		"post2" : "NN",
-		"post2img" : "NN"
-	}];
+	[ "",
+		"Second annual self portrait, 8\"x9\" drawing pad; January 2nd, 2015. Colored pencils and photoshop for background.",
+		"Images/Art/self2.JPG",
+		"Study drawing from a magazine, 18\"x24\" newsprint; February 21st, 2014. One brown colored pencil.",
+		"Images/Art/model.JPG",
+		"International competition.",
+		"Images/Art/international1.JPG"
+	],
+	[ "",
+		"Oil Paintings coming soon",
+		"Images/Art/2015birthday.JPG",
+	],
+	[ "",
+		"Watercolors coming soon",
+		"Images/Art/2015birthday.JPG",
+	]];
 
-var numPictures = 2;
+var numPictures = 3;
 
 
 
@@ -49,14 +47,15 @@ var numPictures = 2;
 			section.setAttribute("style", "display: inline-block");
 
 			for ( var j = 0; j < numPictures; j++ ){
-				if ( getPicture(i,j,1) != "NN" ){
+				var indexDes = ((j+1)*2);
+				if ( indexDes < pictures[i].length ){
 					var img = document.createElement("IMG");
 
-					img.setAttribute("SRC", getPicture(i, j, 2));
+					img.setAttribute("SRC", pictures[i][indexDes]);
 					img.setAttribute("style", "width: 45%; padding: 5%; display: inline-block;");
 
 					section.appendChild(img);
-					// var text = document.createTextNode(getPicture(i, j, 1));
+					// var text = document.createTextNode(pictures[i][(j+1)*2-1]);
 					// section.appendChild(text);
 				}
 				divContent.appendChild(section);
