@@ -6,8 +6,10 @@ var pictures = [
 		"Images/Art/self2.JPG",
 		"Study drawing from a magazine, 18\"x24\" newsprint; February 21st, 2014. One brown colored pencil.",
 		"Images/Art/model.JPG",
-		"International competition.",
-		"Images/Art/international1.JPG"
+		"Entry into the World Children's Art Exhibition Contest, 11\"x18\" black sketch pad; March 18th, 2014. Colored pencils, oil pastels, and oil paint for the snow effect. Winner of Certificate of Merit.",
+		"Images/Art/international1.JPG",
+		"First annual self portrait, 8\"x9\" drawing pad; January 1st, 2014. `Colored pencils and photoshop for background.",
+		"Images/Art/self1.JPG"
 	],
 	[ "",
 		"Oil Paintings coming soon",
@@ -18,7 +20,7 @@ var pictures = [
 		"Images/Art/2015birthday.JPG",
 	]];
 
-var numPictures = 3;
+var numPictures = 4;
 
 
 
