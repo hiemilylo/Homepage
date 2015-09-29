@@ -29,6 +29,28 @@ IMG{
 	margin: 0 auto;
 }
 
+.image{
+	width: 200px;
+	padding: 5%;
+	display: inline-block;
+}
+
+.text{
+	width: 250px;
+	background:#FFF;
+	opacity:0;
+}
+
+.image:hover .text {
+	opacity:0.6;
+	text-align:justify;
+	color:#000000;
+	font-size:12px;
+	font-weight:100;
+	font-family:'Open Sans', sans-serif;
+	padding:30px;
+}
+
 .contactLogo{
 	width: 5%;
 	display: inline-block;
@@ -51,14 +73,14 @@ IMG{
 
 .tab-nav{
 	margin: 0 -12rem;
-  padding: 0.7rem 12rem;
-  background: #B4E9E9;
+	padding: 0.7rem 12rem;
+	background: #B4E9E9;
 }
 
 .tab-nav-design{
 	margin: 0 -12rem;
-  padding: 0.25rem 12rem;
-  background: #F3E9A8;
+	padding: 0.25rem 12rem;
+	background: #F3E9A8;
 }
 
 .tab-links{
@@ -165,6 +187,6 @@ li.active a, li.active a:hover {
 }
 
 footer p {
-		font-family: 'Open Sans', sans-serif;
-		font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
 }

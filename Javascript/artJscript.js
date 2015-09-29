@@ -47,15 +47,29 @@ var numPictures = 3;
 			section.setAttribute("style", "display: inline-block");
 
 			for ( var j = 0; j < numPictures; j++ ){
-				var indexDes = ((j+1)*2);
-				if ( indexDes < pictures[i].length ){
-					var img = document.createElement("IMG");
+				var indexImg = ((j+1)*2);
+				if ( indexImg < pictures[i].length ){
+					var imgDiv = document.createElement("div");
+					imgDiv.setAttribute("class", "image");
+					imgDiv.setAttribute("style", "width: 45%; padding: 5%; display: inline-block;");
 
-					img.setAttribute("SRC", pictures[i][indexDes]);
-					img.setAttribute("style", "width: 45%; padding: 5%; display: inline-block;");
+					var img = document.createElement("img");
+					img.setAttribute("SRC", pictures[i][indexImg]);
+					img.setAttribute("style", "width: 100%");
 
-					section.appendChild(img);
-					// var text = document.createTextNode(pictures[i][(j+1)*2-1]);
+					var textDiv = document.createElement("div");
+					textDiv.setAttribute("class", "text");
+					var text = document.createTextNode(pictures[i][indexImg-1]);
+					textDiv.appendChild(text);
+
+					imgDiv.appendChild(img);
+					imgDiv.appendChild(textDiv);
+					section.appendChild(imgDiv);
+					// img.setAttribute("SRC", pictures[i][indexImg]);
+					// img.setAttribute("style", "width: 45%; padding: 5%; display: inline-block;");
+					//
+					//
+					// section.appendChild(img);
 					// section.appendChild(text);
 				}
 				divContent.appendChild(section);
