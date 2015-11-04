@@ -11,24 +11,56 @@ var pictures = [
 		"First annual self portrait, 8\"x9\" drawing pad; January 1st, 2014. `Colored pencils and photoshop for background.",
 		"Images/Art/self1.JPG",
 		"PTA Reflections 2015",
-		"Images/Art/2015pta.JPG"
+		"Images/Art/2015pta.JPG",
+		"Alaska",
+		"Images/Art/alaska.JPG",
+		"models",
+		"Images/Art/models.JPG",
+		"classic",
+		"Images/Art/classic.JPG",
+		"corgi",
+		"Images/Art/corgi.JPG",
+		"2013 PTA",
+		"Images/Art/2013pta.JPG",
+		"2014 PTA",
+		"Images/Art/2014pta.JPG",
+		"pen",
+		"Images/Art/pensketch.JPG"
 	],
 	[ "",
-	"Oil Paintings coming soon",
+	"Long Oil Paint",
 	"Images/Art/longoil.JPG",
+	"Flower oil",
+	"Images/Art/floweroil.JPG",
+	"Scratch Oil Paint",
+	"Images/Art/scratchoil.JPG",
+	"Abstract oil",
+	"Images/Art/abstractoil.JPG",
+	"Flower Vase",
+	"Images/Art/flowervaseoil.JPG",
+	"Ocean",
+	"Images/Art/oceanoil.JPG",
+	"Hummingbirds",
+	"Images/Art/hummingbirdoil.JPG"
 	],
 	[ "",
-	"Watercolors coming soon",
-	"Images/Art/2015birthday.JPG",
+	"flowers",
+	"Images/Art/flowerwater.JPG",
+	"fairy",
+	"Images/Art/fairywater.JPG"
 	],
 	[ "",
 		"Backdrop 1",
 		"Images/Art/backdrop1.JPG",
 		"Backdrop 2",
-		"Images/Art/backdrop2.JPG"
+		"Images/Art/backdrop2.JPG",
+		"bookmark1",
+		"Images/Art/2015birthday.JPG",
+		"bookmark2",
+		"Images/Art/may2013.JPG"
 	]];
 
-var numPictures = 5;
+var numPictures = 12;
 
 	function changePicture(){
 		var value = $('#options').val();
