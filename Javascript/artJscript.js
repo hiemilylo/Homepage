@@ -22,8 +22,6 @@ var pictures = [
 
 var numPictures = 4;
 
-
-
 	function changePicture(){
 		var value = $('#options').val();
 		$('#picHolder').attr('src', "Images/" + value);
