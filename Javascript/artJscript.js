@@ -1,4 +1,4 @@
-var categories = ["Sketches", "Oil Paintings", "Watercolors"];
+var categories = ["Sketches", "Oil Paintings", "Watercolors", "Miscellaneous"];
 
 var pictures = [
 	[ "",
@@ -9,18 +9,26 @@ var pictures = [
 		"Entry into the World Children's Art Exhibition Contest, 11\"x18\" black sketch pad; March 18th, 2014. Colored pencils, oil pastels, and oil paint for the snow effect. Winner of Certificate of Merit.",
 		"Images/Art/international1.JPG",
 		"First annual self portrait, 8\"x9\" drawing pad; January 1st, 2014. `Colored pencils and photoshop for background.",
-		"Images/Art/self1.JPG"
+		"Images/Art/self1.JPG",
+		"PTA Reflections 2015",
+		"Images/Art/2015pta.JPG"
 	],
 	[ "",
-		"Oil Paintings coming soon",
-		"Images/Art/2015birthday.JPG",
+	"Oil Paintings coming soon",
+	"Images/Art/longoil.JPG",
 	],
 	[ "",
-		"Watercolors coming soon",
-		"Images/Art/2015birthday.JPG",
+	"Watercolors coming soon",
+	"Images/Art/2015birthday.JPG",
+	],
+	[ "",
+		"Backdrop 1",
+		"Images/Art/backdrop1.JPG",
+		"Backdrop 2",
+		"Images/Art/backdrop2.JPG"
 	]];
 
-var numPictures = 4;
+var numPictures = 5;
 
 	function changePicture(){
 		var value = $('#options').val();
@@ -51,7 +59,7 @@ var numPictures = 4;
 				if ( indexImg < pictures[i].length ){
 					var imgDiv = document.createElement("div");
 					imgDiv.setAttribute("class", "image");
-					imgDiv.setAttribute("style", "width: 45%; padding: 5%; display: inline-block;");
+					imgDiv.setAttribute("style", "width: 45%; padding: 2%; display: inline-block;");
 
 					var img = document.createElement("img");
 					img.setAttribute("SRC", pictures[i][indexImg]);
