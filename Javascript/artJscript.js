@@ -44,6 +44,10 @@ var pictures = [
 	"Images/Art/hummingbirdoil.JPG"
 	],
 	[ "",
+	"farm",
+	"Images/Art/farmwater.JPG",
+	"window",
+	"Images/Art/windowwater.JPG",
 	"flowers",
 	"Images/Art/flowerwater.JPG",
 	"fairy",
