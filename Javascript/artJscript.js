@@ -61,7 +61,7 @@ var pictures = [
 		"bookmark1",
 		"Images/Art/2015birthday.JPG",
 		"bookmark2",
-		"Images/Art/may2013.JPG"
+		"Images/Art/may2013.jpg"
 	]];
 
 var numPictures = 12;
