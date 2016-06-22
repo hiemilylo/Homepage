@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en>"
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>1024</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+	<title> 2048 </title>
+	<style>
+    	html,
+    	body {
+        	margin: 0;
+        	padding: 10px;
+        	background: #faf8ef;
+        	color: #ffffff;
+        	font-family: "Helvetica Neue", Arial, sans-serif;
+        	font-size: 36px;
+        	font-weight: bolder;
+    	}
+    	h1{
+   		 color: gray;
+   		 font-weight:bold;
+   		 font-size: 90px;
+   	 }
+    	.grid-container {
+        	position: absolute;
+        	z-index: 1;
+    	}
+
+    	.grid-row {
+        	margin-bottom: 15px;
+    	}
+
+    	.grid-row:last-child {
+        	margin-bottom: 0;
+    	}
+
+    	.grid-row:after {
+        	content: "";
+        	display: block;
+        	clear: both;
+    	}
+
+    	.grid-cell {
+        	width: 106.25px;
+        	height: 106.25px;
+        	margin-right: 15px;
+        	float: left;
+        	border-radius: 3px;
+        	text-align: center;
+        	color: gray;
+   		 font-size: 50px;
+        	background: rgba(238, 228, 218, 0.35);
+    	}
+
+    	.grid-cell:last-child {
+        	margin-right: 0;
+    	}
+
+    	.game-container {
+        	margin-top: 40px;
+        	position: relative;
+        	padding: 15px;
+        	cursor: default;
+        	background: #bbada0;
+        	border-radius: 6px;
+        	width: 500px;
+        	height: 500px;
+        	-webkit-box-sizing: border-box;
+        	-moz-box-sizing: border-box;
+        	box-sizing: border-box;
+    	}
+   	 #centered{
+   		 width: 500px;
+   		 margin-left: auto;
+   		 margin-right: auto;
+   	 }
+   	 .alert {
+   		 position: absolute;
+   		 top:280px;
+   		 left:auto;
+   		 right: auto;
+   		 width:500px;
+   		 font-size: 40px;
+   		 color: rgba(238, 228, 218, 0.35);
+   		 z-index: 9;
+   		 box-shadow:
+   	 }
+   	 #lose{
+   		 background:#c72d2d;
+   		 display: none;
+   	 }
+   	 #win{
+   		 background: #52c5ff;
+   		 display: none;
+   	 }
+   	 #shadow{
+   		 width: 500px;
+   		 height: 100%;
+   		 position: absolute;
+   		 top: 50px;
+   		 bottom: 0;
+   		 z-index:8;
+   		 background-color: gray;
+   		 opacity: .7;
+   		 display: none;
+   	 }
+	</style>
+	<script>
+    	var colors = {
+        	0: "rgba(238, 228, 218, 0.35)",
+        	2: "#f0e5da",
+        	4: "#ede2c8",
+        	8: "#feb578",
+        	16: "#ff9962",
+        	32: "#ff8060",
+        	64: "#ff613c",
+        	128: "#efd26d",
+        	256: "#efd15c",
+        	512: "#efcd4a",
+        	1024: "#f0ca36",
+        	2048: "#ccc0b3"
+    	};
+    	var board = [
+        	[2, 0, 0, 0],
+        	[2, 0, 0, 0],
+        	[0, 0, 0, 0],
+        	[0, 0, 2, 0]
+    	];
+    	$(document).ready(function() {
+        	//temporary function to demonstrate interaction between html and javascript
+
+        	drawBoard();
+
+
+    	});
+
+    	function findZero() {
+        	var zero = [];
+        	for (var i = 0; i < 4; i++) {
+            	for (var j = 0; j < 4; j++) {
+                	if (board[i][j] == 0) {
+                    	zero.push([i, j]);
+                	}
+            	}
+        	}
+        	return zero;
+    	}
+
+    	function drawBoard() {
+        	for (var i = 0; i < 4; i++) {
+            	for (var j = 0; j < 4; j++) {
+                	var boardID = "r" + i + "c" + j;
+                	if (board[i][j] != 0) {
+                    	$("#" + boardID).text(board[i][j]);
+                	} else {
+                    	$("#" + boardID).text("");
+                	}
+   				 if(board[i][j]==1024){
+   					 $('#win').show();
+   					 $('#shadow').show();
+   				 }
+            	}
+        	}
+
+        	//temporary function to demonstrate interaction between css and javascript
+        	for (var i = 0; i < 4; i++) {
+            	for (var j = 0; j < 4; j++) {
+                	var boardID = "r" + i + "c" + j;
+                	var cellValue = board[i][j];
+                	$('#' + boardID).css('background', colors[cellValue]);
+            	}
+        	}
+
+    	};
+    	var up = 38;
+    	var left = 37;
+    	var right = 39;
+    	var down = 40;
+
+
+
+    	$(document).keydown(function(e) {
+       	// console.log(e.keyCode);
+        	move(e.keyCode);
+    	});
+
+    	function move(direction) {
+        	if (direction == up) {
+            	for (var i = 0; i < 4; i++) {
+                	for (var j = 0; j < 4; j++) {
+                    	emptyNum = 1;
+                    	var helper = false;
+                    	while (board[i][j] != 0 && emptyNum <= i && board[i - emptyNum][j] == 0) {
+                        	emptyNum++;
+                        	helper = true;
+                    	}
+                    	board[i - emptyNum + 1][j] = board[i][j];
+
+                    	if (helper == true) {
+
+                        	board[i][j] = 0;
+                       	// console.log(board[i][j]);
+                    	}
+
+                    	if (i - emptyNum + 1 >= 1 && board[i - emptyNum + 1][j] == board[i - emptyNum][j]) {
+                        	board[i - emptyNum][j] = board[i - emptyNum][j] * 2;
+                        	board[i - emptyNum + 1][j] = 0;
+
+                    	}
+
+                	}
+            	}
+        	} else if (direction == left) {
+            	for (var i = 0; i < 4; i++) {
+                	for (var j = 0; j < 4; j++) {
+                    	emptyNum = 1;
+                    	var helper = false;
+                    	while (board[i][j] != 0 && emptyNum <= j && board[i][j - emptyNum] == 0) {
+                        	emptyNum++;
+                        	helper = true;
+                    	}
+                    	board[i][j - emptyNum + 1] = board[i][j];
+
+                    	if (helper == true) {
+
+                        	board[i][j] = 0;
+                       	// console.log(board[i][j]);
+                    	}
+
+                    	if (j - emptyNum + 1 >= 1 && board[i][j - emptyNum + 1] == board[i][j - emptyNum]) {
+                        	board[i][j - emptyNum] = board[i][j - emptyNum] * 2;
+                        	board[i][j - emptyNum + 1] = 0;
+
+                    	}
+
+                	}
+            	}
+        	} else if (direction == right) {
+            	for (var i = 0; i < 4; i++) {
+                	for (var j = 3; j >= 0; j--) {
+                    	emptyNum = 1;
+                    	var helper = false;
+                    	while (board[i][j] != 0 && emptyNum + j < 4 && board[i][j + emptyNum] == 0) {
+                        	emptyNum++;
+                        	helper = true;
+                    	}
+
+                    	board[i][j + emptyNum - 1] = board[i][j];
+
+                    	if (helper == true) {
+
+                        	board[i][j] = 0;
+                        	//console.log(board[i][j]);
+                    	}
+
+
+                    	if (j + emptyNum -1 <3 && board[i][j + emptyNum - 1] == board[i][j + emptyNum]) {
+                        	board[i][j + emptyNum] = board[i][j + emptyNum] * 2;
+                        	board[i][j + emptyNum - 1] = 0;
+
+                    	}
+
+                	}
+            	}
+
+
+        	} else if (direction == down) {
+            	for (var i = 3; i >= 0; i--) {
+                	for (var j = 0; j < 4; j++) {
+                    	emptyNum = 1;
+                    	var helper = false;
+                    	while (board[i][j] != 0 && emptyNum + i < 4 && board[i + emptyNum][j] == 0) {
+                        	emptyNum++;
+                        	helper = true;
+                    	}
+
+                    	board[i + emptyNum - 1][j] = board[i][j];
+
+                    	if (helper == true) {
+                        	board[i][j] = 0;
+                        	//console.log(board[i][j]);
+                    	}
+
+                    	if (i + emptyNum - 1 <3 && board[i + emptyNum - 1][j] == board[i + emptyNum][j]) {
+                        	board[i + emptyNum][j] = board[i + emptyNum][j] * 2;
+                        	board[i + emptyNum-1][j] = 0;
+                    	}
+
+                	}
+            	}
+
+        	}
+        	var zero = findZero();
+        	var x = zero[Math.floor(Math.random() * zero.length)];
+        	board[x[0]][x[1]] = 2;
+        	drawBoard();
+   		 if(!checkLose()){
+   			 youLose();
+   		 }
+    	};
+   	 function checkLose(){
+   		 var turnLeft=false;
+   		 if(findZero().length==0){
+   			 for(var i=0; i<4; i++){
+   				 for(var j=0; j<4; j++){
+   					 if(j<3 && board[i][j]==board[i][j+1]){
+   						 turnLeft=true;
+   					 }
+   					 if(i<3 && board[i][j]==board[i+1][j]){
+   						 turnLeft=true;
+   					 }
+   				 }
+   			 }
+   		 }
+   		 else{
+   			 turnLeft=true;
+   		 }
+   		 return turnLeft;
+   	 };
+   	 function youLose(){
+   		 $('#lose').show();
+   		 $('#shadow').show();
+   	 };
+	</script>
+
+</head>
+
+<body>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+    <div id="centered">
+    <h1>1024<h1>
+	<div class="game-container">
+    	<div class="grid-container">
+        	<div class="grid-row">
+            	<div class="grid-cell" id="r0c0"></div>
+            	<div class="grid-cell" id="r0c1"></div>
+            	<div class="grid-cell" id="r0c2"></div>
+            	<div class="grid-cell" id="r0c3"></div>
+        	</div>
+        	<div class="grid-row">
+            	<div class="grid-cell" id="r1c0"></div>
+            	<div class="grid-cell" id="r1c1"></div>
+            	<div class="grid-cell" id="r1c2"></div>
+            	<div class="grid-cell" id="r1c3"></div>
+        	</div>
+        	<div class="grid-row">
+            	<div class="grid-cell" id="r2c0"></div>
+            	<div class="grid-cell" id="r2c1"></div>
+            	<div class="grid-cell" id="r2c2"></div>
+            	<div class="grid-cell" id="r2c3"></div>
+        	</div>
+        	<div class="grid-row">
+            	<div class="grid-cell" id="r3c0"></div>
+            	<div class="grid-cell" id="r3c1"></div>
+            	<div class="grid-cell" id="r3c2"></div>
+            	<div class="grid-cell" id="r3c3"></div>
+        	</div>
+    	</div>
+
+	</div>
+    <div id="lose" class="alert alert-warning alert-dismissible" role="alert">
+   	 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+   	 <strong>Oh Noes!</strong> You lost. Want to play again?
+    </div>
+    <div id="win" class="alert alert-warning alert-dismissible" role="alert">
+   	 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+   	 <strong>Whoopee!</strong> You win! 
+    </div>
+    <div id="shadow">
+    </div>
+</div>
+
+</body>
+
+</html>
