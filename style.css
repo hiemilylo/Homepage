@@ -86,6 +86,7 @@ IMG{
 .tab-links{
 	margin:0px;
 	padding-left:18%;
+	/*padding-left: 11%;*/ with independent projects
 }
 
 .tab-links:after {
