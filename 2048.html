@@ -2,23 +2,12 @@
 <html lang="en>"
 <head>
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <title>1024</title>
-<!-- Bootstrap -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-	<title> 2048 </title>
 	<style>
     	html,
     	body {
@@ -35,10 +24,11 @@
    		 font-weight:bold;
    		 font-size: 90px;
    	 }
-		 
-		 p{
-			 font-size 12px;
+
+		 p, a{
+			 font-size: 20px;
 		 }
+
     	.grid-container {
         	position: absolute;
         	z-index: 1;
@@ -145,11 +135,7 @@
         	[0, 0, 2, 0]
     	];
     	$(document).ready(function() {
-        	//temporary function to demonstrate interaction between html and javascript
-
         	drawBoard();
-
-
     	});
 
     	function findZero() {
@@ -347,10 +333,8 @@
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/bootstrap.min.js"></script>
     <div id="centered">
     <h1>1024<h1>
-		<p ><a href="index.html">Return to homepage.</a></p>
 	<div class="game-container">
     	<div class="grid-container">
         	<div class="grid-row">
@@ -380,6 +364,7 @@
     	</div>
 
 	</div>
+		<p><a href="index.html">Return to homepage.</a></p>
     <div id="lose" class="alert alert-warning alert-dismissible" role="alert">
    	 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
    	 <strong>Oh Noes!</strong> You lost. Want to play again?
