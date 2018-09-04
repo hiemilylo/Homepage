@@ -9,15 +9,41 @@ body{
 	margin: auto 0;
 }
 
-h1 {
-	font-family: 'Open Sans', sans-serif;
-	padding: 10% 10% 0 10%;
-	border-style: none;
-	text-align: center;
+.navbar {
+	text-align: right;
+	padding-right: 8vw;
+	padding-left: 8vw;
+	margin: 3vw auto;
 }
 
-@media only screen and (max-width: 768px) {
-	h1 { padding: 35% auto 0; }
+.title {
+	text-decoration: none;
+	position: relative;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	color: #000000;
+}
+
+a::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: -4px;
+	left: 0;
+	background-color: #189ACA;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .tab-content p {
