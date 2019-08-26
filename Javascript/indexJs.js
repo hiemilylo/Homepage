@@ -1,13 +1,47 @@
-jQuery(document).ready(function() {
-	jQuery('.tabs .tab-links a').on('click', function(e)  {
-		var currentAttrValue = jQuery(this).attr('href');
+// vars
+var num=30;
+var objects=[];
+var raycaster = new THREE.Raycaster();
+var mouse = new THREE.Vector2();
+var light,t;
 
-		// Show/Hide Tabs
-		jQuery('.tabs ' + currentAttrValue).slideDown(400).siblings().slideUp(400);
+// create camera
+var camera = new THREE.PerspectiveCamera
+( 65, window.innerWidth/window.innerHeight,
+0.1, 1000 );
+camera.position.set(0.0,0.0,5);
+// create a scene
+var scene = new THREE.Scene();
 
-		// Change/remove current tab to active
-		jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+// create renderer
+var renderer = new THREE.WebGLRenderer(
+{antialias:true});
+renderer.setSize( window.innerWidth, window.
+innerHeight );
+document.body.appendChild( renderer.domElement
+);
 
-		e.preventDefault();
-	});
-});
+//Create a Spot light
+light = new THREE.SpotLight( 0xccddff,.8 );
+light.position.set(0,0,5);
+scene.add( light );
+
+var animate = function () {
+	requestAnimationFrame( animate );
+	renderer.render(scene, camera);
+};
+
+// start animation loop
+animate();
+
+// create Tetrahedron
+var geometry = new THREE.
+TetrahedronBufferGeometry(2,0);
+var material = new THREE.MeshPhysicalMaterial
+( { map:texture,   envMap:envMap,
+metalness:1.0,roughness:0.0 });
+t = new THREE.Mesh( geometry, material );
+t.rotation.x=Math.PI/180*-10;
+scene.add( t );
+
+console.log('hi!')
