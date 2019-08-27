@@ -2,10 +2,9 @@
 body{
 	margin: 0;
 	padding: 0;
-	overflow: none;
 }
 
-h1 {
+#name {
 	color:white;
 	position: absolute;
 	top: 50%;
@@ -24,7 +23,7 @@ h1 {
 	color:white;
 	position: absolute;
 	/* TODO: fix this */
-	top: calc(50% + 16px + 30px + 50px);
+	top: calc(50% + 95px);
 	z-index: 100;
 	width: 100%;
 	text-align: center;
@@ -48,3 +47,13 @@ h1 {
 	opacity: 1;
 }
 
+#landing {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100vw;
+}
+
+#about {
+	height: 50vh;
+}
